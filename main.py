@@ -9,8 +9,17 @@ window = ThemedTk(theme="arc")         # Create the application window
 
 # Add a label with the text "Hey"
 lbl = Label(window, text="Hello", font=("Arial Bold", 50))
+score = 0
 
-# Place the label in the window at 0, 0
+def addToScore():
+  message = txt.get()
+  if message == "Jon":
+    lbl['text'] = "go away"
+  else:
+    lbl['text'] = "hello"
+
+# Add a label with the text "Hello"
+lbl = Label(window, text=score, font=("Arial Bold", 50))
 lbl.grid(column=0, row=0)
 firstLabel = Label(window, text = "This is a label") 
 firstLabel.grid(column=4, row=3)                         
@@ -42,5 +51,14 @@ spin = Spinbox(window, from_=0, to=100, width=4)
 spin.grid(column=4,row=4)
 
 
+btn = Button(window, text="Click", command=addToScore)
+btn.grid(column = 0 , row = 1)
+
+txt = Entry(window,width=10)
+txt.grid(column=1, row=0)
+
+
 
 window.mainloop()     # Keep the window open
+
+
