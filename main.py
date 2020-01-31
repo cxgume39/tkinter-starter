@@ -3,7 +3,6 @@
 from tkinter import * # import Tkinter library
 # from tkinter.ttk import Progressbar
 # from tkinter import Menu
-from tkinter.ttk import
 from ttkthemes import ThemedTk
 window = ThemedTk(theme="arc")         # Create the application window
 
